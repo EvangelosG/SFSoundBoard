@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">SFSoundBoard</string>
+    <string name="Alex">Alex</string>
+    <string name="Balrog">Balrog</string>
+    <string name="Birdie">Birdie</string>
+    <string name="Cammy">Cammy</string>
+    <string name="ChunLi">"Chun-Li"</string>
+    <string name="Dhalsim">Dhalsim</string>
+    <string name="Guile">Guile</string>
+    <string name="Ibuki">Ibuki</string>
+    <string name="Karin">Karin</string>
+    <string name="Ken">Ken</string>
+    <string name="Mika">Mika</string>
+    <string name="Nash">Nash</string>
+    <string name="Ryu">Ryu</string>
+    <string name="Urien">Urien</string>
+    <string name="Vega">Vega</string>
+    <string name="Zangief">Zangief</string>
+</resources>
