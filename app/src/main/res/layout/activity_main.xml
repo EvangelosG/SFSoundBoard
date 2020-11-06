@@ -1,16 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/white">
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
 
-    <com.example.sfsoundboard.views.GridRecyclerView
-        android:id="@+id/recyclerView"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@android:color/transparent" />
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        tools:context=".MainActivity">
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/titleTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/sf_orange"
+            android:fontFamily="@font/ssfont"
+            android:padding="10dp"
+            android:text="@string/SFSoundBoard"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="50sp" />
+
+
+        <com.example.sfsoundboard.views.GridRecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/titleTV"
+            android:background="@android:color/transparent" />
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

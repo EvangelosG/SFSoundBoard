@@ -7,5 +7,5 @@ import kotlinx.android.parcel.Parcelize
 data class SBButton (
     val icon : Int?,
     val name : String?,
-    val mainSound : Int?
+    val mainSound : MutableList<Int?>?
 ) : Parcelable
