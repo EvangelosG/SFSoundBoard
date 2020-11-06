@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -10,26 +9,46 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity"
+        android:id="@+id/topRel">
 
-        <TextView
-            android:id="@+id/titleTV"
+        <RelativeLayout
+            android:id="@+id/middleRel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/sf_orange"
-            android:fontFamily="@font/ssfont"
-            android:padding="10dp"
-            android:text="@string/SFSoundBoard"
-            android:textAlignment="center"
-            android:textColor="@android:color/holo_red_dark"
-            android:textSize="50sp" />
+            android:background="@color/sf_orange">
+
+            <TextView
+                android:id="@+id/titleTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ssfont"
+                android:padding="10dp"
+                android:text="@string/SFSoundBoard"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="70sp" />
+
+            <TextView
+                android:id="@+id/titleTV2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:layout_marginEnd="-5dp"
+                android:fontFamily="@font/ssfont"
+                android:padding="10dp"
+                android:text="@string/SFSoundBoard"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="70sp" />
+        </RelativeLayout>
 
 
         <com.example.sfsoundboard.views.GridRecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/titleTV"
+            android:layout_below="@+id/middleRel"
             android:background="@android:color/transparent" />
 
     </RelativeLayout>
