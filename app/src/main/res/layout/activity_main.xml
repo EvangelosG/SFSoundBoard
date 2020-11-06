@@ -27,7 +27,7 @@
                 android:text="@string/SFSoundBoard"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="70sp" />
+                android:textSize="60sp" />
 
             <TextView
                 android:id="@+id/titleTV2"
@@ -40,7 +40,7 @@
                 android:text="@string/SFSoundBoard"
                 android:textAlignment="center"
                 android:textColor="@android:color/holo_red_dark"
-                android:textSize="70sp" />
+                android:textSize="60sp" />
         </RelativeLayout>
 
 
