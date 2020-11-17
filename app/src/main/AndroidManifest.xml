@@ -20,8 +20,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".CharacterSoundBoard"
-            android:theme="@style/Theme.SFSoundBoard"/>
+        <activity
+            android:name=".CharacterSoundBoard"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.SFSoundBoard" />
     </application>
 
 </manifest>

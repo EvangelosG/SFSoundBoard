@@ -1,5 +1,6 @@
 package com.example.sfsoundboard.viewholders
 
+import android.content.Intent
 import android.content.res.Resources
 import android.media.MediaPlayer
 import android.view.View
@@ -7,11 +8,11 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.sfsoundboard.CharacterSoundBoard
 import com.example.sfsoundboard.R
 
 import com.example.sfsoundboard.sbkeys.SBButton
 import kotlinx.android.synthetic.main.soundboard_item_view.view.*
-import java.lang.NullPointerException
 import kotlin.random.Random
 
 class SoundBoardViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -23,7 +24,8 @@ class SoundBoardViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             itemView.startAnimation(shake)
             try {
                 val rnd: Random = Random(System.currentTimeMillis())
-                val player: MediaPlayer? = button.mainSound?.get(rnd.nextInt(0, button.mainSound.size))?.let { it1 -> MediaPlayer.create(itemView.context, it1) }
+                val player: MediaPlayer? = button.sounds?.get(rnd.nextInt(0, button.sounds.size))
+                    ?.let { it1 -> MediaPlayer.create(itemView.context, it1) }
                 player?.start()
                 player?.setOnCompletionListener {
                     player.release()
@@ -33,7 +35,10 @@ class SoundBoardViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             }
         }
         itemView.setOnLongClickListener {
-            //TODO launch new activity passing in button
+            val intent = Intent(itemView.context, CharacterSoundBoard::class.java).apply {
+                putExtra("button", button)
+            }
+            itemView.context.startActivity(intent)
             return@setOnLongClickListener true
         }
 

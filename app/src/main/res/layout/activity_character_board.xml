@@ -6,11 +6,10 @@
     android:background="@android:color/transparent">
 
     <RelativeLayout
+        android:id="@+id/topRel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/black"
-        tools:context=".MainActivity"
-        android:id="@+id/topRel">
+        tools:context=".MainActivity">
 
         <RelativeLayout
             android:id="@+id/middleRel"
@@ -41,8 +40,16 @@
                 android:textAlignment="center"
                 android:textColor="@android:color/holo_red_dark"
                 android:textSize="60sp" />
-        </RelativeLayout>
 
+            <ImageView
+                android:id="@+id/characterIcon"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="10dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/character_background"
+                android:scaleType="fitXY" />
+        </RelativeLayout>
 
         <com.example.sfsoundboard.views.GridRecyclerView
             android:id="@+id/recyclerView"
