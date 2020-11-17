@@ -26,6 +26,7 @@ class CharacterSoundBoard : AppCompatActivity() {
 
     val TAG: String = CharacterSoundBoard::class.simpleName.toString()
     val SPAN_COUNT = 4;
+    val ICON_ANIM_DURATION: Long = 2000;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +43,9 @@ class CharacterSoundBoard : AppCompatActivity() {
             titleTV.text = button?.name
             titleTV2.text = button?.name
             Glide.with(this).load(button?.icon).into(characterIcon)
+            val anim: Animation = AnimationUtils.loadAnimation(this, R.anim.slide_in_from_bottom)
+            anim.duration = ICON_ANIM_DURATION
+            characterIcon.startAnimation(anim)
         }
     }
 
